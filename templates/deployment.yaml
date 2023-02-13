@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-local
+  labels:
+    app: chatgpt-local
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatgpt-local
+  template:
+    metadata:
+      labels:
+        app: chatgpt-local
+    spec:
+      containers:
+        - name: chatgpt-local
+          image: ghcr.io/Hugh472/chatgpt-local:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
