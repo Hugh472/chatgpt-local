@@ -1,0 +1,6 @@
+# Default values for chatgpt-local.
+
+# Image repository
+image:
+  repository: ghcr.io/Hugh472/chatgpt-local
+  tag: latest
