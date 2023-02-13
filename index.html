@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPT-3 Playground</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>GPT-3 Playground</h1>
+    <form action="/generate" method="post">
+      <textarea name="input_text" placeholder="Enter your prompt here">{{ input_text }}</textarea><br>
+      <button type="submit">Generate</button>
+    </form>
+    <hr>
+    <h2>Response:</h2>
+    <pre>{{ response }}</pre>
+  </body>
+</html>
