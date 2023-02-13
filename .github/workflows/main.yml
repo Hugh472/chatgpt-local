@@ -23,11 +23,11 @@ jobs:
         tags: "${{ env.GITHUB_REGISTRY }}/${{ env.GITHUB_REPOSITORY }}/$IMAGE_NAME:${{ env.GITHUB_SHA }}"
 
     - name: Login to GitHub Packages
-      uses: docker/login-action@v1
+      uses: docker/login-action@v2
       with:
         registry: ${{ env.GITHUB_REGISTRY }}
 
     - name: Push Docker Image to GitHub Packages
-      uses: docker/push-action@v1
+      uses: docker/push-action@v2
       with:
         tags: "${{ env.GITHUB_REGISTRY }}/${{ env.GITHUB_REPOSITORY }}/$IMAGE_NAME:${{ env.GITHUB_SHA }}"
