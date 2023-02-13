@@ -1,0 +1,10 @@
+apiVersion: v2
+name: chatgpt-local
+
+# Define the chart's metadata
+metadata:
+  name: chatgpt-local
+  version: 0.1.0
+  maintainers:
+    - name: Kyle Hughes
+      email: kpmhughes@skiff.com
