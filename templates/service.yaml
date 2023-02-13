@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatgpt-local
+  labels:
+    app: chatgpt-local
+spec:
+  type: ClusterIP
+  selector:
+    app: chatgpt-local
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
